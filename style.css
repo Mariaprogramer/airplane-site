@@ -1,71 +1,64 @@
 
 body {
-  font-family: Arial, sans-serif;
-  background: #ffeef3;
+  font-family: sans-serif;
+  background-color: #ffeef2;
+  color: #6b4c4c;
   margin: 0;
   padding: 0;
-  color: #333;
 }
-
-header {
-  background: #ffc6d3;
-  padding: 1rem;
+.app {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
-
-h1 {
-  color: #d6336c;
+.sidebar {
+  width: 220px;
+  background: #fddde6;
+  padding: 1em;
+  height: 100vh;
 }
-
-button {
-  background: #ff99bb;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
+.sidebar h2, .sidebar h3 {
+  color: #d17288;
+}
+.sidebar ul li {
+  list-style: none;
   cursor: pointer;
+  margin: 0.5em 0;
 }
-
-main {
-  padding: 2rem;
+.personal-notes textarea {
+  width: 100%;
+  height: 80px;
 }
-
-section {
-  margin-bottom: 2rem;
-  background: #fff;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.planner {
+  flex: 1;
+  padding: 2em;
+  background: #fff0f5;
 }
-
-.modal {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.course-card {
+  background: #ffe4ec;
+  padding: 1em;
+  border-radius: 10px;
+  margin-top: 1em;
 }
-
-.modal-content {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  width: 300px;
-}
-
 .hidden {
   display: none;
 }
-
-#chatbot {
+.modal {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
-  background: #ffe3ec;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: white;
+  padding: 2em;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+.modal input {
+  display: block;
+  margin: 0.5em auto;
+  width: 90%;
+  padding: 0.5em;
 }

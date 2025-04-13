@@ -1,49 +1,51 @@
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Airplane - Voar Alto Juntos 2k25</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="firebase.js" defer></script>
-  <script src="script.js" defer></script>
+  <title>Airplane - Voar alto juntos 2k25</title>
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
-  <header>
-    <h1>Airplane 💖</h1>
-    <button id="login-btn">Entrar</button>
-  </header>
-
-  <main>
-    <section class="plano">
-      <h2>Plano de Estudos</h2>
-      <p>Seu plano de estudos personalizado para OBA, OBMEP, ONC, SAT e TOEFL.</p>
-    </section>
-
-    <section class="cursinhos">
-      <h2>Cursinhos Intensivos</h2>
+  <div class="app">
+    <aside class="sidebar">
+      <h2>Study Planner</h2>
       <ul>
-        <li>🔬 OBMEP</li>
-        <li>🌌 OBA</li>
-        <li>🧪 ONC</li>
-        <li>📝 SAT</li>
-        <li>🎧 TOEFL</li>
+        <li onclick="showCard('toefl')">TOEFL</li>
+        <li onclick="showCard('sat')">SAT</li>
+        <li onclick="showCard('obmep')">OBMEP</li>
+        <li onclick="showCard('oba')">OBA</li>
+        <li onclick="showCard('onc')">ONC</li>
       </ul>
-    </section>
-  </main>
-
-  <div id="chatbot">
-    <p>👋 Oi! Sou o ChatGPT, pode me chamar se tiver dúvidas!</p>
+      <div class="personal-notes">
+        <h3>Personal Notes</h3>
+        <textarea></textarea>
+      </div>
+    </aside>
+    <main class="planner">
+      <h1>Monday</h1>
+      <ul class="task-list">
+        <li><input type="checkbox"> Read Chapter 1 (Biology)</li>
+        <li><input type="checkbox"> Complete exercise set</li>
+      </ul>
+      <div class="course-card hidden" id="obmep">
+        <h2>OBMEP Cursinho (6 Meses)</h2>
+        <p>Semana 1: Álgebra Básica</p>
+        <a href="#">Ver PDF</a>
+      </div>
+    </main>
   </div>
-
-  <div id="login-modal" class="modal hidden">
+  <div class="modal hidden" id="login-modal">
     <div class="modal-content">
-      <h3>Login</h3>
+      <h3>Entrar / Criar Conta</h3>
       <input type="email" id="email" placeholder="Email" />
       <input type="password" id="password" placeholder="Senha" />
+      <input type="password" id="confirm" placeholder="Confirmar senha" />
       <button onclick="login()">Entrar</button>
+      <button onclick="signup()">Criar Conta</button>
     </div>
   </div>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
