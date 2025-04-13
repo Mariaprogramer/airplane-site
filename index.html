@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Airplane - Voar Alto Juntos 2k25</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="firebase.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Airplane 💖</h1>
+    <button id="login-btn">Entrar</button>
+  </header>
+
+  <main>
+    <section class="plano">
+      <h2>Plano de Estudos</h2>
+      <p>Seu plano de estudos personalizado para OBA, OBMEP, ONC, SAT e TOEFL.</p>
+    </section>
+
+    <section class="cursinhos">
+      <h2>Cursinhos Intensivos</h2>
+      <ul>
+        <li>🔬 OBMEP</li>
+        <li>🌌 OBA</li>
+        <li>🧪 ONC</li>
+        <li>📝 SAT</li>
+        <li>🎧 TOEFL</li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="chatbot">
+    <p>👋 Oi! Sou o ChatGPT, pode me chamar se tiver dúvidas!</p>
+  </div>
+
+  <div id="login-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Login</h3>
+      <input type="email" id="email" placeholder="Email" />
+      <input type="password" id="password" placeholder="Senha" />
+      <button onclick="login()">Entrar</button>
+    </div>
+  </div>
+</body>
+</html>
